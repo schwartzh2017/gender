@@ -12,3 +12,7 @@ Prepare a report.md that contains:
 - It must contain at least one embedded data visualization.
 - A conclusion section.
 - Make a slide deck of 5 slides to present your findings. ppt or [HTML](https://github.com/cd-public/slide_portable/)
+
+# Outcome
+- See report.md for full result.
+- See [Google Slides](https://docs.google.com/presentation/d/12ixPtwc3A7cpwCaqugdaSRAvc7CI-EEzCaLImLkJZ1s/edit?usp=sharing) for presentation.
