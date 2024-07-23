@@ -99,4 +99,3 @@ Since these changes occured only for traditional female pronouns in only the fin
 5. NPR. (2015, November 2). *J.K. Rowling On Her Nom De Plume Robert Galbraith* NPR. https://www.npr.org/2015/11/02/453885684/j-k-rolling-on-her-nom-de-plume-robert-galbraith#:~:text=She%20was%20outed%20back%20in,very%20real%20person%20to%20me.
 6. PDFAgile. https://www.pdfagile.com/online/pdf-to-txt
 7. van de Rakt, M. (2019, May 20). *The Flesch reading ease score: why and how to use it.* Yoast. https://yoast.com/flesch-reading-ease-score/#:~:text=What%20is%20the%20Flesch%20reading,easy%20to%20read
-finish this, add superscripts
