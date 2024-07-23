@@ -1,0 +1,122 @@
+---
+title: "CC_gender_Schwartz"
+author: "Haleigh Schwartz"
+date: "2024-07-23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Load libraries and ds
+```{r}
+library(tidyverse)
+
+setwd("/Users/Haleigh/Documents/MSDS/Cloud_Computing/gender")
+ds = read_csv("final_ds.csv")
+
+```
+
+#Clean
+```{r}
+ds = ds %>% 
+  filter(books != "HP1_norm") %>%
+  pivot_longer(cols = hers_NNS:her_NNP, values_to = "prop") %>%
+  rename(pos = name) %>% 
+  mutate(adjust = case_when(
+    books=="CC_norm" & pos == "hers_NNS" ~ 4.1,
+    books=="CC_norm" & pos == "her_PRP$" ~ 3.1,
+    books=="CC_norm" & pos == "her_PRP" ~ 2.1,
+    books=="CC_norm" & pos == "her_NNP" ~ 1.1,
+    books=="HP7_norm" & pos == "hers_NNS" ~ 3.9,
+    books=="HP7_norm" & pos == "her_PRP$" ~ 2.9,
+    books=="HP7_norm" & pos == "her_PRP" ~ 1.9,
+    books=="HP7_norm" & pos == "her_NNP" ~ 0.9,
+  )) %>%
+  rename(Books = books)
+
+ds = ds %>%
+  mutate(prop = ifelse(prop > 1.2, 10, prop)) #for sake of visualization. make sure to note on plot
+```
+
+
+
+#Visualize - zoom out
+```{r}
+cc = ds %>%
+  filter(Books == "CC_norm")
+
+hp7 = ds %>%
+  filter(Books == "HP7_norm")
+  
+
+cc %>% 
+  ggplot()+
+  geom_segment(aes(y=1, yend=prop, x=adjust, xend=adjust, color=Books),size=3) +
+  geom_point(aes(y=prop, x=adjust, color=Books),size=3) +
+  geom_point(data=hp7,aes(y=prop, x=adjust, color=Books),size=3) +
+  geom_segment(data=hp7,aes(y=1, yend=prop, x=adjust, xend=adjust, color=Books),size=3) +
+  ylim(0.75,10)+
+  coord_flip()+
+  theme_classic()+
+  scale_x_continuous(
+    labels=c("her_NNP","her_PRP","her_PRP$", "hers_NNS")
+  ) +
+  labs(
+    title="Time and male pseudonyms led to patriarchical writing in JK Rowling's works",
+    subtitle="Pronoun part of speech proportions normalized to Harry Potter 1"
+  )+
+  xlab("Pronoun_PoS")+
+  ylab("Proportion \n(normalized to pronoun frequency then to Harry Potter 1)")+
+  scale_color_discrete(
+    labels = c("Cuckoo's Calling", "Harry Potter 7")
+    ) +
+  annotate("text", x=3.55, y=9, label="Both `hers_NNS` values\nare actually at 100,000!\n(shortened for plot)", color="black", size=3) +
+  annotate("text", x=1.35, y=9, label="Harry Potter 7\n `her_NNP` value\nis actually at 538!\n(shortened for plot)", color="black", size=3)
+
+```
+
+#Visualize - zoom in
+```{r}
+ds2 = ds %>%
+  mutate(prop = ifelse(prop > 1.2, 1.2, prop)) #for sake of visualization. make sure to note on plot
+
+
+cc2 = ds2 %>%
+  filter(Books == "CC_norm")
+
+hp7b = ds2 %>%
+  filter(Books == "HP7_norm")
+  
+
+cc2 %>% 
+  ggplot()+
+  geom_segment(aes(y=1, yend=prop, x=adjust, xend=adjust, color=Books),size=3) +
+  geom_point(aes(y=prop, x=adjust, color=Books),size=3) +
+  geom_point(data=hp7b,aes(y=prop, x=adjust, color=Books),size=3) +
+  geom_segment(data=hp7b,aes(y=1, yend=prop, x=adjust, xend=adjust, color=Books),size=3) +
+  ylim(0.75,1.2)+
+  coord_flip()+
+  theme_classic()+
+  scale_x_continuous(
+    labels=c("her_NNP","her_PRP","her_PRP$", "hers_NNS")
+  ) +
+  labs(
+    title="Time and male pseudonyms led to patriarchical writing in JK Rowling's works",
+    subtitle="Pronoun part of speech proportions normalized to Harry Potter 1"
+  )+
+  xlab("Pronoun_PoS")+
+  ylab("Proportion \n(normalized to pronoun frequency then to Harry Potter 1)")+
+  scale_color_discrete(
+    labels = c("Cuckoo's Calling", "Harry Potter 7")
+    ) +
+  annotate("text", x=3.55, y=1.15, label="Both `hers_NNS` values\nare actually at 100,000!\n(shortened for plot)", color="black", size=3) +
+  annotate("text", x=1.35, y=1.15, label="Harry Potter 7\n `her_NNP` value\nis actually at 538!\n(shortened for plot)", color="black", size=3)
+
+```
+
+
+
+
+
