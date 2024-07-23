@@ -16,24 +16,24 @@ I hypothesize that JK Rowling wrote with more patriarchical object and subject f
 # Evaluation
 1. Download comparable number of words between her Harry Potter series and books by "Robert Galbraith" 
     - Find PDFs
-        - "The Cuckoo's Calling" (https://worldfabibooks.wordpress.com/wp-content/uploads/2013/10/the-cuckoo_s-calling-robert-galbraith-j-k-rowling.pdf)
-            - Use only pre-2013 Robert Galbraith books because that is when JK Rowling's pseudonym became common knowledge (NPR, 2015) 
+        - ["The Cuckoo's Calling"¹](https://worldfabibooks.wordpress.com/wp-content/uploads/2013/10/the-cuckoo_s-calling-robert-galbraith-j-k-rowling.pdf)
+            - Use only pre-2013 Robert Galbraith books because that is when JK Rowling's pseudonym became common knowledge.⁵
             - Download pgs 7-384
-            - Use https://www.pdfagile.com/online/pdf-to-txt to convert to txt
+            - Use [PDF Agile⁶](https://www.pdfagile.com/online/pdf-to-txt) to convert to txt
             - Find line count ("wc -l cuckoos_calling_text.txt") = 16373
-        - "Harry Potter and the Sorcerer's Stone" (https://docenti.unimc.it/antonella.pascali/teaching/2018/19055/files/ultima-lezione/harry-potter-and-the-philosophers-stone)
+        - ["Harry Potter and the Sorcerer's Stone"³](https://docenti.unimc.it/antonella.pascali/teaching/2018/19055/files/ultima-lezione/harry-potter-and-the-philosophers-stone)
             - Use this one as standard to compare others to
             - Download 2-250
             - Repeat steps above
             - Line count = 11113
-        - "Harry Potter and the Deathly Hallows" (https://vidyaprabodhinicollege.edu.in/VPCCECM/ebooks/ENGLISH%20LITERATURE/Harry%20potter/(Book%207)%20Harry%20Potter%20And%20The%20Deathly%20Hallows.pdf)
+        - ["Harry Potter and the Deathly Hallows"⁴](https://vidyaprabodhinicollege.edu.in/VPCCECM/ebooks/ENGLISH%20LITERATURE/Harry%20potter/(Book%207)%20Harry%20Potter%20And%20The%20Deathly%20Hallows.pdf)
             - Choose this one because closest in time to release date of Cuckoo's Calling
             - Download 7-767
             - Repeat steps above
             - Line count = 24320
     - Use Flesch Reading Score to determine reading level
-        - (Reading level is given on a linear scale of 1-100, so it will be easy to adjust line count later.)
-        - https://readabilityformulas.com/readability-scoring-system.php
+        - (Reading level is given on a linear scale of 1-100, so it will be easy to adjust line count later.⁷)
+        - [Readability Scoring System²](https://readabilityformulas.com/readability-scoring-system.php)
         - Uploaded txt files, which reduces each to 3500 words
         - Process random sample
         - Repeated 3x, found average 
@@ -77,11 +77,27 @@ I hypothesize that JK Rowling wrote with more patriarchical object and subject f
 
 
 # Conclusion
-input visualizations
-review what the pos mean
-make ppt
+When I reduced my dataset to just the pronoun-part of speech groupings that showed a difference from the frequencies in Harry Potter 1, I was left with three: "her-PRP$", "her_PRP", and "her-NNP." PRP$ is the abbreviation for a possessive pronoun; PRP, personal pronoun; and NNP, proper noun.
 
+I plotted these three for both books (Cuckoo's Calling and Harry Potter 7) as a barbell plot to easily see which proportions depicted a drop or an increase in frequency.
+
+![JK_Rowling_pronoun_PoS_chart](./jk_pos.png)
+
+I was surprised for many reasons. One, JK Rowling's writing under her male pseudonym did not change the frequencies of her pronoun parts of speech in comparison to her first Harry Potter book fifteen years earlier. Instead, her seventh and final Harry Potter book, written ten years after the first, reflected much more "patriarchical" subject and object frequencies. The plot shows that the assigned usage of "her" increased as a possessive pronoun and decreased as a personal pronoun. Even more dramatically, the usage of "her" as a proper noun dropped nearly completely. It is quite notable these same changes were not seen for the corresponding traditional male pronouns.
+surprised
+
+Second, I was  that "her" was the only pronoun to see a change across books. At the very least, I expected to see similar changes in "hers." At most, I would have thought to see opposing changes in the corresponding "him" and "his" pronouns. This may be due to the fact that there are two male-gendered pronouns ("him" and "his") for two separate meanings whereas there is only one female-gendered pronoun for both usages ("her").
+
+Finally, I was surprised that only the *same* three pronoun-part of speech groupings differed across books. I thought there may have been some changes in one book that weren't present in another. However, the results show that only "her-PRP$", "her_PRP", and "her-NNP" depicted changes- again supporting the conclusion from the above paragraph and suggesting some patriarchical influence in JK Rowling's writing.
+
+Since these changes occured only for traditional female pronouns in only the final Harry Potter book (which was written before Cuckoo's Calling), it is reasonable to conclude that fame may have subconciously influenced JK Rowling to write in a manner more aligned with culture's expectations- a pressure that wasn't present years later while writing under a pseudonym, even an assumed male pseudonym.
 
 # Works Cited
-1. NPR. (2015, November 2). *J.K. Rowling On Her Nom De Plume Robert Galbraith* NPR. https://www.npr.org/2015/11/02/453885684/j-k-rolling-on-her-nom-de-plume-robert-galbraith#:~:text=She%20was%20outed%20back%20in,very%20real%20person%20to%20me.
+1. Galbraith, R. (2013) *The Cuckoo's Calling.* Sphere/Little, Brown Book Group. https://worldfabibooks.wordpress.com/wp-content/uploads/2013/10/the-cuckoo_s-calling-robert-galbraith-j-k-rowling.pdf
+2. Readability Scoring System. https://readabilityformulas.com/readability-scoring-system.php
+3. Rowling, JK. (1997). *Harry Potter and the Sorcerer's Stone.* Bloomsbury Publishing. https://docenti.unimc.it/antonella.pascali/teaching/2018/19055/files/ultima-lezione/harry-potter-and-the-philosophers-stone
+4. Rowling, JK. (2007). *Harry Potter and the Deathly Hallows.* Bloomsbury Publishing. https://vidyaprabodhinicollege.edu.in/VPCCECM/ebooks/ENGLISH%20LITERATURE/Harry%20potter/(Book%207)%20Harry%20Potter%20And%20The%20Deathly%20Hallows.pdf
+5. NPR. (2015, November 2). *J.K. Rowling On Her Nom De Plume Robert Galbraith* NPR. https://www.npr.org/2015/11/02/453885684/j-k-rolling-on-her-nom-de-plume-robert-galbraith#:~:text=She%20was%20outed%20back%20in,very%20real%20person%20to%20me.
+6. PDFAgile. https://www.pdfagile.com/online/pdf-to-txt
+7. van de Rakt, M. (2019, May 20). *The Flesch reading ease score: why and how to use it.* Yoast. https://yoast.com/flesch-reading-ease-score/#:~:text=What%20is%20the%20Flesch%20reading,easy%20to%20read
 finish this, add superscripts
