@@ -68,11 +68,10 @@ cc %>%
     subtitle="(Pronoun part of speech proportions normalized to Harry Potter 1)"
   )+
   xlab("Pronoun_PoS")+
-  ylab("Proportion \n(normalized to pronoun frequency then to Harry Potter 1)")+
+  ylab("Proportion \n(normalized to pronoun frequency then to Harry Potter 1)") +
   scale_color_discrete(
     labels = c("Cuckoo's Calling", "Harry Potter 7")
-    ) 
-
+    )
 ggsave("jk_pos.png")
 ```
 

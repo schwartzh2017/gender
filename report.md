@@ -1,5 +1,5 @@
 # Introduction 
-Compare JK Rowling's object and subject frequencies for feminine and masculine personal pronouns when she is writing as herself or her pseudonym, Robert Galbraith.  
+Compare JK Rowling's pronoun part of speech assignments when she is writing as herself or her pseudonym, Robert Galbraith..  
 
 
 # Methodology
@@ -10,7 +10,7 @@ Compare JK Rowling's object and subject frequencies for feminine and masculine p
 
 
 # Hypothesis
-I hypothesize that JK Rowling wrote with more patriarchal object and subject frequencies both when she was writing as a male and as time progressed.
+I hypothesize that JK Rowling wrote with more “patriarchal” pronoun part of speech assignments both when she was writing as a male and as time progressed.
 
 
 # Evaluation
